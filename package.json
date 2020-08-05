@@ -29,7 +29,8 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "jquery": "^3.5.1",
-    "slick-carousel": "^1.8.1"
+    "jquery-migrate": "^1.2.1",
+    "slick-slider": "^1.8.2"
   },
   "browserslist": [
     "> 1%",

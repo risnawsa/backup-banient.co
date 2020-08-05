@@ -2,16 +2,6 @@
 // This file contains all main js.
 // -----------------------------------------------------------------------------
 
-var $ = require('jquery');
-window._ = require('lodash');
-try {
-    window.$ = window.jQuery = require('jquery');
-
-    require('bootstrap');
-} catch (e) {}
-
-require('slick-slider/slick/slick');
-
 $(document).ready(function() {
     $('.autoplay-slick').slick({
         slidesToShow: 3,

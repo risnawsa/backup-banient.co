@@ -9,13 +9,20 @@ var del = require('del');
 // target source scss
 var input = {
     'sass': 'src/sass/**/*.scss',
-    // 'js': 'src/vendor/main.js'
+    'js': 
+        [
+            'src/vendor/main.js',
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'node_modules/jquery-migrate/dist/jquery-migrate.min.js',
+            'node_modules/slick-slider/slick/slick.min.js'
+        ]
 };
 
 // output css
 var output = {
     'css': 'dist/fe/css',
-    // 'js': 'dist/fe/js'
+    'js': 'dist/fe/js'
 };
 
 // gulp.task('default', ['styles', 'watch', 'clean']);
@@ -38,6 +45,15 @@ gulp.task('build-css', function () {
             stream: true
         }))
 });
+
+gulp.task('build-js',function(){
+    return gulp.src(input.js)
+        .pipe(gulp.dest(output.js))
+        .pipe(sourcemaps.write())
+        .pipe(browserSync.stream(
+            {stream: true}
+        ));
+    });
 
 // styles SCSS to CSS files
 gulp.task('styles', () => {
