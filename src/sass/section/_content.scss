@@ -1,3 +1,349 @@
 // -----------------------------------------------------------------------------
 // This file contains all content styles.
 // -----------------------------------------------------------------------------
+
+section{
+    padding: 7rem 0;
+
+    &.banner {
+        padding: 2rem 0 7rem; 
+
+        @media (min-width: 768px) and (min-height: 550px) {
+            height: 100vh;
+        }
+
+        @media (max-width: 767px) and (min-height: 800px) {
+            height: 100vh;
+        }
+
+        .container {
+            position: relative; 
+
+            @media (min-width: 768px) and (min-height: 550px) {
+                height: 100vh; 
+            }
+
+            @media (max-width: 767px) and (min-height: 800px) {
+                height: 100vh;
+            }
+
+            .content-banner{
+                @media (max-width: 767px) and (min-height: 800px) {
+                    position: absolute;
+                    transform: translate(0, -50%);
+                    top: 55%;
+                    width: 100%;
+                }
+
+                @media (max-width: 767px) and (min-height: 800px) and (max-width: 767px) {
+                    width: calc(100% - 30px);
+                }
+
+                @media (min-width: 768px) and (min-height: 550px) {
+                    position: absolute;
+                    transform: translate(0, -50%);
+                    top: 55%;
+                    width: 100%;
+                }
+
+                @media (min-width: 768px) and (min-height: 550px) and (max-width: 767px) {
+                    width: calc(100% - 30px);
+                }
+            }
+        }
+
+        .imgs-ban {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            padding-top: 100%; 
+        }
+
+        .header-menu {
+            .--sosmed {
+                .icons {
+                    width: 15px; 
+                }
+            }
+        }
+    }
+
+    &.timeline-journey {
+        padding: 0; 
+
+        .head-journey-slides {
+            background-image: url("../../../dist/fe/assets/images/kotak.png");
+            background-position: center;
+            background-size: contain;
+            padding: 5rem 0; 
+
+            .ct-head {
+                width: calc(100% - 200px); 
+
+                @include respond-max(lg-tablet) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .journey-slick{
+            &.slick-slider {
+                margin: 2rem 0;
+                padding: 2rem 0; 
+
+                button{
+                    &.slick-arrow {
+                        transform: translate(-50%, -50%);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: auto;
+                        padding: 34px;
+                        background-color: transparent;
+                        border: 1px solid #b5b5b5;
+                        background-image: url("../../../dist/fe/assets/images/ic_arrow_left.png"); 
+
+
+                        &::before {
+                            content: ''; 
+                        }
+
+                        @include on-event{
+                            transform: rotate(0);
+                            background-color: #ffffff;
+                            border: 1px solid #b5b5b5;
+                            box-shadow: 0px 10px 10px 0px #2b2929;
+                            background-image: url("../../../dist/fe/assets/images/ic_arrow-right.png");
+                        }
+
+                        @include respond-max(lg-tablet) {
+                            top: -10%;
+                            padding: 20px 36px;
+                        }
+                    }
+
+                    &.slick-prev {
+                        top: -88%;
+                        left: unset;
+                        right: 60px; 
+
+                        @include on-event{
+                            right: 95px;
+                            top: -107%;
+                            transform: rotate(180deg);
+                        }
+
+                        @include respond-max(lg-tablet) {
+                            right: unset;
+                            top: -40%;
+                            left: 35px;
+
+                            @include on-event{
+                                top: -50%;
+                                right: unset;
+                                left: 0;
+                            }
+                        }
+                    }
+
+                    &.slick-next {
+                        left: unset;
+                        top: -107%;
+                        right: 0;
+                        transform: rotate(180deg); 
+
+                        @include respond-max(lg-tablet){
+                            right: unset;
+                            left: 85px;
+                            top: -50%;
+                        }
+                    }
+                }
+
+                .slick-slide {
+                    margin-top: 3rem; 
+
+                    .--img-miles {
+                        img {
+                            width: 40px;
+                            margin: auto; 
+                        }
+                    }
+                }
+
+                .slick-dots {
+                    bottom: unset;
+                    top: -32px;
+                    border: 1px solid #ffffff; 
+
+                    li {
+                        width: auto;
+                        height: auto;
+                        background-color: transparent; 
+
+                        button {
+                            width: auto;
+                            height: auto;
+                            color: #ffffff;
+                            font-size: 16px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.wcprv {
+        background-image: url("../../../dist/fe/assets/images/kotak.png");
+        background-position: center;
+        background-size: contain; 
+
+        .img-icons {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 120px; 
+        }
+    }
+
+    &.wwcndo{
+        .content-slick{
+            .autoplay-slick{
+                @include respond-max(lg-tablet) {
+                    margin-top: 5rem;
+                }
+
+                .slick-list {
+                    padding-right: 10%; 
+
+                    @include respond-max(lg-tablet) {
+                        padding-right: 0;
+                    }
+
+                    .slick-track {
+                        .slick-slide {
+                            transition: all 1.2s ease-in-out;
+                            margin: 2rem 1.5rem;
+                            margin-left: 0;
+                            padding: 55px 40px;
+                            cursor: pointer; 
+
+                            @include respond-max(md-dekstop) {
+                                margin: 1rem;
+                                margin-left: 0;
+                                padding: 55px 30px;
+                            }
+
+                            @include respond-max(lg-tablet) {
+                                margin: 1rem 0;
+                            }
+
+                            &.slick-current{
+                                &.slick-active {
+                                    background-color: #ffffff;
+                                    box-shadow: 0px 0px 30px 0px #2b2929; 
+
+                                    h3, p{
+                                        color: #312f2f;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                button{
+                    &.slick-arrow {
+                        transform: translate(-50%, -50%);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: auto;
+                        padding: 34px;
+                        background-color: transparent;
+                        border: 1px solid #b5b5b5;
+                        background-image: url("../../../dist/fe/assets/images/ic_arrow_left.png"); 
+
+                        &::before {
+                            content: ''; 
+                        }
+
+                        @include on-event{
+                            transform: rotate(0);
+                            background-color: #ffffff;
+                            border: 1px solid #b5b5b5;
+                            box-shadow: 0px 10px 10px 0px #2b2929;
+                            background-image: url("../../../dist/fe/assets/images/ic_arrow-right.png");
+                        }
+
+                        @include respond-max(lg-tablet) {
+                            top: -10%;
+                            padding: 20px 36px;
+                        }
+                    }
+
+                    &.slick-prev {
+                        left: unset;
+                        top: -30%;
+                        right: 60px; 
+
+                        @include on-event{
+                            right: 8.5%;
+                            top: -41%;
+                            transform: rotate(180deg);
+
+                            @include respond-max(md-dekstop) {
+                                right: 14%;
+                                top: -43%;
+                            }
+                        }
+
+                        @include respond-max(lg-tablet) {
+                            right: unset;
+                            left: 38px;
+                            top: -25px;
+
+                            @include on-event{
+                                right: unset;
+                                top: -45px;
+                                left: 0;
+                            }
+                        }
+                    }
+
+                    &.slick-next {
+                        left: unset;
+                        top: -41%;
+                        right: 0;
+                        transform: rotate(180deg); 
+
+                        @include respond-max(md-dekstop) {
+                            top: -43%;
+                        }
+
+                        @include respond-max(lg-tablet) {
+                            right: unset;
+                            left: 90px;
+                            top: -45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.lkfor{
+        background-color: #312f2f;
+
+        .--right {
+            margin: auto;
+            padding-left: 70px; 
+
+            @include respond-max(md-dekstop) {
+                padding-left: 15px;
+            }
+
+            @include respond-max(lg-tablet) {
+                margin: 1.5rem 0;
+            }
+        }
+    }
+}

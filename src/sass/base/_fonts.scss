@@ -3,13 +3,13 @@
 // -----------------------------------------------------------------------------
 
 // Fontawesome
-// @import '~@fortawesome/fontawesome-free/scss/brands';
-// @import '~@fortawesome/fontawesome-free/scss/fontawesome';
-// @import '~@fortawesome/fontawesome-free/scss/solid';
+// @import '@fortawesome/fontawesome-free/scss/brands';
+// @import '@fortawesome/fontawesome-free/scss/fontawesome';
+// @import '@fortawesome/fontawesome-free/scss/solid';
 
-// @font-face {
-//     font-family: brandonText_reg;
-//     src: url('../../../assets/fonts/brandon-text/BrandonText-Regular.otf');
-//     font-style: normal;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: gilroy_reg;
+    src: url('../../../dist/fe/assets/fonts/Gilroy/Gilroy-Regular.otf');
+    font-style: normal;
+    font-display: swap;
+}
