@@ -8,12 +8,14 @@ var del = require('del');
 
 // target source scss
 var input = {
-    'sass': 'src/sass/**/*.scss'
+    'sass': 'src/sass/**/*.scss',
+    // 'js': 'src/vendor/main.js'
 };
 
 // output css
 var output = {
-    'css': 'dist/fe/css'
+    'css': 'dist/fe/css',
+    // 'js': 'dist/fe/js'
 };
 
 // gulp.task('default', ['styles', 'watch', 'clean']);
@@ -56,5 +58,6 @@ gulp.task('watch', () => {
 gulp.task('clean', () => {
     return del([
         'dist/fe/css/main.css',
+        // 'dist/fe/js/main.js',
     ]);
 });
