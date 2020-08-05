@@ -1,0 +1,30 @@
+{
+  "name": "backup-banient.co",
+  "version": "1.0.0",
+  "description": "This is Banient.co Landing Page",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.5.1",
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "jquery": "^3.5.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risnawsa/backup-banient.co.git"
+  },
+  "author": "Risna Wati Sainudin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/risnawsa/backup-banient.co/issues"
+  },
+  "homepage": "https://github.com/risnawsa/backup-banient.co#readme"
+}

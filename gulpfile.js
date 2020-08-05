@@ -8,7 +8,7 @@ var del = require('del');
 
 // target source scss
 var input = {
-    'sass': 'src/stylesheets/*.scss'
+    'sass': 'src/sass/*.scss'
 };
 
 // output css
