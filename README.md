@@ -8,6 +8,6 @@ This is Banient.co Landing Page
 ## 4. Install new package for requirements such as :
         `` npm install ``
         `` npm install -g gulp `` for global installed
-        `` npm install gulp gulp-sass gulp-sourcemaps gulp-autoprefixer browser-sync --save-dev``
+        `` npm install gulp gulp-sass gulp-sourcemaps gulp-autoprefixer browser-sync del --save-dev``
 ## 5. Install all new dependencies package
 ## 6. Run ``gulp build-css`` to generate sass file into css and ``gulp watch`` to watch all the changes sass file
