@@ -51,6 +51,7 @@ $(document).ready(function() {
         fade: true,
         asNavFor: '.slider-nav-journey'
     });
+
     $('.slider-nav-journey').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -60,4 +61,6 @@ $(document).ready(function() {
         centerMode: false,
         focusOnSelect: true
     });
+
+    AOS.init();
 });

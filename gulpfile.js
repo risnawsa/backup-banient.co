@@ -15,7 +15,8 @@ var input = {
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/jquery-migrate/dist/jquery-migrate.min.js',
-            'node_modules/slick-slider/slick/slick.min.js'
+            'node_modules/slick-slider/slick/slick.min.js',
+            'node_modules/aos/dist/aos.js'
         ]
 };
 
