@@ -57,10 +57,12 @@ $(document).ready(function() {
         slidesToScroll: 1,
         asNavFor: '.slider-for-journey',
         dots: false,
-        arrows: false,
+        arrows: true,
         centerMode: false,
         focusOnSelect: true
     });
 
     AOS.init();
+    
+    $(".slider-nav-journey .slick-arrow").prependTo("#jrn-arws").html();
 });

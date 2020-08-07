@@ -7,6 +7,7 @@ section{
 
     &.banner {
         padding: 2rem 0 7rem; 
+        position: relative;
 
         @media (min-width: 768px) and (min-height: 550px) {
             height: 100vh;
@@ -14,6 +15,30 @@ section{
 
         @media (max-width: 767px) and (min-height: 800px) {
             height: 100vh;
+        }
+
+        &::before, &::after{
+            position: absolute;
+            content: '';
+            background-image: url('../../../dist/fe/assets/images/ilus.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-top: 40%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        &::before{
+            top: -560px;
+            right: -560px;
+            transform: rotate(170deg);
+        }
+
+        &::after{
+            bottom: -600px;
+            left: -800px;
+            transform: rotate(180deg);
         }
 
         .container {
@@ -70,6 +95,7 @@ section{
 
     &.timeline-journey {
         padding: 0; 
+        position: relative;
 
         .head-journey-slides {
             background-image: url("../../../dist/fe/assets/images/kotak.png");
@@ -84,108 +110,154 @@ section{
                     width: 100%;
                 }
             }
-        }
 
-        .journey-slick{
-            &.slick-slider {
-                margin: 2rem 0;
-                padding: 2rem 0; 
+            .slick-arrow{
+                background-color: transparent;
+                border: 1px solid $white;
+                transition: all .3s ease-in-out;
+                width: 70px;
+                height: 70px;
+                &::before{
+                    content: '';
+                    background-image: url('../../../dist/fe/assets/images/ic_arrow_left.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    padding-top: 20%;
+                    display: block;
+                }
 
-                button{
-                    &.slick-arrow {
-                        transform: translate(-50%, -50%);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: auto;
-                        padding: 34px;
-                        background-color: transparent;
-                        border: 1px solid #b5b5b5;
-                        background-image: url("../../../dist/fe/assets/images/ic_arrow_left.png"); 
+                @include on-event{
+                    background-color: $white;
+                    border-color: transparent;
+                }
 
-
-                        &::before {
-                            content: ''; 
-                        }
-
-                        @include on-event{
-                            transform: rotate(0);
-                            background-color: #ffffff;
-                            border: 1px solid #b5b5b5;
-                            box-shadow: 0px 10px 10px 0px #2b2929;
-                            background-image: url("../../../dist/fe/assets/images/ic_arrow-right.png");
-                        }
-
-                        @include respond-max(lg-tablet) {
-                            top: -10%;
-                            padding: 20px 36px;
+                &.slick-prev{
+                    left: -80px;
+                    @include on-event{
+                        background-color: $white;
+                        border-color: transparent;
+                        &::before{
+                            transform: rotate(180deg) !important;
+                            background-image: url('../../../dist/fe/assets/images/ic_arrow-right.png');
                         }
                     }
+                }
 
-                    &.slick-prev {
-                        top: -88%;
-                        left: unset;
-                        right: 60px; 
-
-                        @include on-event{
-                            right: 95px;
-                            top: -107%;
-                            transform: rotate(180deg);
+                &.slick-next{
+                    right: -80px;
+                    @include on-event{
+                        background-color: $white;
+                        border-color: transparent;
+                        &::before{
+                            transform: rotate(0) !important;
+                            background-image: url('../../../dist/fe/assets/images/ic_arrow-right.png');
                         }
+                    }
+                    &::before{
+                        transform: rotate(180deg) !important;
+                    }
+                }
+            }
+        }
 
-                        @include respond-max(lg-tablet) {
-                            right: unset;
-                            top: -40%;
-                            left: 35px;
+        .sec-journey{
+            margin-top: -25px;
 
-                            @include on-event{
-                                top: -50%;
-                                right: unset;
-                                left: 0;
+            .jrny-slick{
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 25px;
+                    left: 0;
+                    width: 100%;
+                    height: 1.8px;
+                    background-color: #b5b5b5;
+                    z-index: -1;
+                }
+    
+                .slider-nav-journey{
+                    position: relative;
+    
+                    &::before, &::after{
+                        content: '';
+                        position: absolute;
+                        top: 11.7px;
+                        width: 1.3px;
+                        height: 28px;
+                        background-color: #b5b5b5;
+                    }
+    
+                    &::before{
+                        left: 0;
+                    }
+    
+                    &::after{
+                        right: -1px;
+                    }
+    
+                    .slick-list{
+                        margin: 0 50px;
+                        padding: 60px 0;
+                        position: relative;
+    
+                        .slick-track{
+                            .slick-slide{
+                                &.slick-current{
+                                    &.slick-active{
+                                        .slides-dots--sc{
+                                            .big-dots--sc{
+                                                .smll-dots{
+                                                    display: block;
+                                                    position: relative;
+
+                                                    &::before{
+                                                        position: absolute;
+                                                        content: '';
+                                                        transform: translateX(-50%);
+                                                        top: -18px;
+                                                        left: 50%;
+                                                        width: 45px;
+                                                        height: 45px;
+                                                        border-radius: 100px;
+                                                        border: 1.2px solid $white;
+                                                        background-color: transparent;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .slides-dots--sc{
+                                    text-align: center;
+                                    position: relative;
+    
+                                    .big-dots--sc{
+                                        position: absolute;
+                                        transform: translateX(-50%);
+                                        top: -40px;
+                                        left: 50%;
+                                        height: 10px;
+                                        width: 10px;
+                                        border-radius: 100%;
+                                        background-color: $white;
+                                        
+                                        .smll-dots{
+                                            display: none;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
-
-                    &.slick-next {
-                        left: unset;
-                        top: -107%;
-                        right: 0;
-                        transform: rotate(180deg); 
-
-                        @include respond-max(lg-tablet){
-                            right: unset;
-                            left: 85px;
-                            top: -50%;
-                        }
-                    }
                 }
-
-                .slick-slide {
-                    margin-top: 3rem; 
-
-                    .--img-miles {
-                        img {
-                            width: 40px;
-                            margin: auto; 
-                        }
-                    }
-                }
-
-                .slick-dots {
-                    bottom: unset;
-                    top: -32px;
-                    border: 1px solid #ffffff; 
-
-                    li {
-                        width: auto;
-                        height: auto;
-                        background-color: transparent; 
-
-                        button {
-                            width: auto;
-                            height: auto;
-                            color: #ffffff;
-                            font-size: 16px; 
-                        }
+    
+                .slider-for-journey{
+                    .slick-list{
+                        margin: 0 50px;
+                        padding: 30px 0 100px;
+                        position: relative;
                     }
                 }
             }
@@ -206,6 +278,7 @@ section{
     }
 
     &.wwcndo{
+        background-color: #3a3939;
         .content-slick{
             .autoplay-slick{
                 @include respond-max(lg-tablet) {

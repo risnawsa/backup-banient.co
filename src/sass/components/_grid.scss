@@ -44,4 +44,14 @@
         grid-template-columns: minmax(1px, 50px) minmax(1px, auto);
         grid-gap: 10px; 
     }
+
+    &.gr-jrny{
+        grid-template-columns: repeat(2, minmax(1px, 1fr));
+        grid-gap: 10px; 
+
+        .mn-right{
+            margin-left: auto;
+            position: relative;
+        }
+    }
 }
