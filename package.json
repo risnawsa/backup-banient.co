@@ -18,12 +18,12 @@
   "homepage": "https://github.com/risnawsa/backup-banient.co#readme",
   "dependencies": {},
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0",
     "animate.css": "^4.1.0",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.5.1",
     "browser-sync": "^2.26.12",
     "del": "^5.1.0",
+    "fontawesome-4.7": "^4.7.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
