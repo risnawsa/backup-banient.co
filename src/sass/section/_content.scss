@@ -4,34 +4,12 @@
 
 section{
     padding: 7rem 0;
+    @include respond-max(sm-tablet) {
+        padding: 5rem 0;
+    }
 
     &.banner {
         padding: 3rem 0; 
-        position: relative;
-
-        &::before, &::after{
-            position: absolute;
-            content: '';
-            background-image: url('../../../dist/fe/assets/images/ilus.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            padding-top: 40%;
-            width: 100%;
-            z-index: -1;
-        }
-
-        &::before{
-            top: -560px;
-            right: -560px;
-            transform: rotate(170deg);
-        }
-
-        &::after{
-            bottom: -600px;
-            left: -800px;
-            transform: rotate(180deg);
-        }
 
         .sec-banner {
             position: relative; 
@@ -39,6 +17,28 @@ section{
             display: grid;
             @include respond-max(lg-tablet) {
                 height: 100%;
+            }
+
+            &::before, &::after{
+                position: absolute;
+                content: '';
+                background-image: url('../../../dist/fe/assets/images/ilus.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                padding-top: 60%;
+                width: 100%;
+                z-index: -1;
+            }
+
+            &::before{
+                top: -450px;
+                right: -700px;
+            }
+
+            &::after{
+                bottom: -500px;
+                left: -800px;
             }
 
             .content-banner{
@@ -127,13 +127,15 @@ section{
 
     &.timeline-journey {
         padding: 0; 
-        position: relative;
 
         .head-journey-slides {
             background-image: url("../../../dist/fe/assets/images/kotak.png");
             background-position: center;
             background-size: contain;
-            padding: 5rem 0;
+            padding: 7rem 0;
+            @include respond-max(sm-tablet) {
+                padding: 5rem 0;
+            }
         }
 
         .sec-journey{
