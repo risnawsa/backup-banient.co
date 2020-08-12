@@ -7,7 +7,8 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: false,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1000,
+        speed: 900,
         infinite: true,
         dots: false,
         focusOnSelect: true,
@@ -33,6 +34,9 @@ $(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        autoplaySpeed: 1000,
+        speed: 900,
+        infinite: true,
         fade: true,
         asNavFor: '.slider-nav-journey'
     });
@@ -43,6 +47,9 @@ $(document).ready(function() {
         asNavFor: '.slider-for-journey',
         dots: false,
         arrows: true,
+        autoplaySpeed: 1000,
+        speed: 900,
+        infinite: true,
         centerMode: false,
         focusOnSelect: true,
         responsive: [
