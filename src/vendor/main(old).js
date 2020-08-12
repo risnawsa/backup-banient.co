@@ -29,6 +29,21 @@ $(document).ready(function() {
         ]
     });
 
+    // $('.journey-slick').slick({
+    //     slidesToScroll: 1,
+    //     slidesToShow: 1,
+    //     autoplay: false,
+    //     autoplaySpeed: 2000,
+    //     infinite: true,
+    //     dots: true,
+    //     focusOnSelect: true,
+    //     arrows: true,
+    //     customPaging: function(slider, i) { 
+    //         return '<button class="tab">' + $(slider.$slides[i]).attr('title') + '<i class="fa fa-sort-asc"></i></button>';
+    //     },
+    // });
+
+
     $('.slider-for-journey').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -44,25 +59,10 @@ $(document).ready(function() {
         dots: false,
         arrows: true,
         centerMode: false,
-        focusOnSelect: true,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2
-                }
-            }
-        ]
+        focusOnSelect: true
     });
 
     AOS.init();
     
-    $(".autoplay-slick .slick-arrow").prependTo("#ds-arws").html();
     $(".slider-nav-journey .slick-arrow").prependTo("#jrn-arws").html();
 });

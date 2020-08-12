@@ -6,6 +6,9 @@
     padding: 25px 15px;
     font-weight: 600;
     transition: all .5s ease-in-out; 
+    @include respond-max(sm-tablet) {
+        padding: 15px 10px;
+    }
 
     &.--white {
         background-color: white;

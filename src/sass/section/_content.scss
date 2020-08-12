@@ -6,16 +6,8 @@ section{
     padding: 7rem 0;
 
     &.banner {
-        padding: 2rem 0 7rem; 
+        padding: 3rem 0; 
         position: relative;
-
-        @media (min-width: 768px) and (min-height: 550px) {
-            height: 100vh;
-        }
-
-        @media (max-width: 767px) and (min-height: 800px) {
-            height: 100vh;
-        }
 
         &::before, &::after{
             position: absolute;
@@ -41,39 +33,16 @@ section{
             transform: rotate(180deg);
         }
 
-        .container {
+        .sec-banner {
             position: relative; 
-
-            @media (min-width: 768px) and (min-height: 550px) {
-                height: 100vh; 
-            }
-
-            @media (max-width: 767px) and (min-height: 800px) {
-                height: 100vh;
+            height: 100vh;
+            display: grid;
+            @include respond-max(lg-tablet) {
+                height: 100%;
             }
 
             .content-banner{
-                @media (max-width: 767px) and (min-height: 800px) {
-                    position: absolute;
-                    transform: translate(0, -50%);
-                    top: 55%;
-                    width: 100%;
-                }
-
-                @media (max-width: 767px) and (min-height: 800px) and (max-width: 767px) {
-                    width: calc(100% - 30px);
-                }
-
-                @media (min-width: 768px) and (min-height: 550px) {
-                    position: absolute;
-                    transform: translate(0, -50%);
-                    top: 55%;
-                    width: 100%;
-                }
-
-                @media (min-width: 768px) and (min-height: 550px) and (max-width: 767px) {
-                    width: calc(100% - 30px);
-                }
+                width: 100%;
             }
         }
 
@@ -88,177 +57,6 @@ section{
             .--sosmed {
                 .icons {
                     width: 15px; 
-                }
-            }
-        }
-    }
-
-    &.timeline-journey {
-        padding: 0; 
-        position: relative;
-
-        .head-journey-slides {
-            background-image: url("../../../dist/fe/assets/images/kotak.png");
-            background-position: center;
-            background-size: contain;
-            padding: 5rem 0; 
-
-            .ct-head {
-                width: calc(100% - 200px); 
-
-                @include respond-max(lg-tablet) {
-                    width: 100%;
-                }
-            }
-
-            .slick-arrow{
-                background-color: transparent;
-                border: 1px solid $white;
-                transition: all .3s ease-in-out;
-                width: 70px;
-                height: 70px;
-                &::before{
-                    content: '';
-                    background-image: url('../../../dist/fe/assets/images/ic_arrow_left.png');
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    padding-top: 20%;
-                    display: block;
-                }
-
-                @include on-event{
-                    background-color: $white;
-                    border-color: transparent;
-                }
-
-                &.slick-prev{
-                    left: -80px;
-                    @include on-event{
-                        background-color: $white;
-                        border-color: transparent;
-                        &::before{
-                            transform: rotate(180deg) !important;
-                            background-image: url('../../../dist/fe/assets/images/ic_arrow-right.png');
-                        }
-                    }
-                }
-
-                &.slick-next{
-                    right: -80px;
-                    @include on-event{
-                        background-color: $white;
-                        border-color: transparent;
-                        &::before{
-                            transform: rotate(0) !important;
-                            background-image: url('../../../dist/fe/assets/images/ic_arrow-right.png');
-                        }
-                    }
-                    &::before{
-                        transform: rotate(180deg) !important;
-                    }
-                }
-            }
-        }
-
-        .sec-journey{
-            margin-top: -25px;
-
-            .jrny-slick{
-                position: relative;
-                &::after{
-                    content: '';
-                    position: absolute;
-                    top: 25px;
-                    left: 0;
-                    width: 100%;
-                    height: 1.8px;
-                    background-color: #b5b5b5;
-                    z-index: -1;
-                }
-    
-                .slider-nav-journey{
-                    position: relative;
-    
-                    &::before, &::after{
-                        content: '';
-                        position: absolute;
-                        top: 11.7px;
-                        width: 1.3px;
-                        height: 28px;
-                        background-color: #b5b5b5;
-                    }
-    
-                    &::before{
-                        left: 0;
-                    }
-    
-                    &::after{
-                        right: -1px;
-                    }
-    
-                    .slick-list{
-                        margin: 0 50px;
-                        padding: 60px 0;
-                        position: relative;
-    
-                        .slick-track{
-                            .slick-slide{
-                                &.slick-current{
-                                    &.slick-active{
-                                        .slides-dots--sc{
-                                            .big-dots--sc{
-                                                .smll-dots{
-                                                    display: block;
-                                                    position: relative;
-
-                                                    &::before{
-                                                        position: absolute;
-                                                        content: '';
-                                                        transform: translateX(-50%);
-                                                        top: -18px;
-                                                        left: 50%;
-                                                        width: 45px;
-                                                        height: 45px;
-                                                        border-radius: 100px;
-                                                        border: 1.2px solid $white;
-                                                        background-color: transparent;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                .slides-dots--sc{
-                                    text-align: center;
-                                    position: relative;
-    
-                                    .big-dots--sc{
-                                        position: absolute;
-                                        transform: translateX(-50%);
-                                        top: -40px;
-                                        left: 50%;
-                                        height: 10px;
-                                        width: 10px;
-                                        border-radius: 100%;
-                                        background-color: $white;
-                                        
-                                        .smll-dots{
-                                            display: none;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-    
-                .slider-for-journey{
-                    .slick-list{
-                        margin: 0 50px;
-                        padding: 30px 0 100px;
-                        position: relative;
-                    }
                 }
             }
         }
@@ -323,79 +121,125 @@ section{
                         }
                     }
                 }
+            }
+        }
+    }
 
-                button{
-                    &.slick-arrow {
-                        transform: translate(-50%, -50%);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: auto;
-                        padding: 34px;
-                        background-color: transparent;
-                        border: 1px solid #b5b5b5;
-                        background-image: url("../../../dist/fe/assets/images/ic_arrow_left.png"); 
+    &.timeline-journey {
+        padding: 0; 
+        position: relative;
 
-                        &::before {
-                            content: ''; 
-                        }
+        .head-journey-slides {
+            background-image: url("../../../dist/fe/assets/images/kotak.png");
+            background-position: center;
+            background-size: contain;
+            padding: 5rem 0;
+        }
 
-                        @include on-event{
-                            transform: rotate(0);
-                            background-color: #ffffff;
-                            border: 1px solid #b5b5b5;
-                            box-shadow: 0px 10px 10px 0px #2b2929;
-                            background-image: url("../../../dist/fe/assets/images/ic_arrow-right.png");
-                        }
+        .sec-journey{
+            margin-top: -25px;
 
-                        @include respond-max(lg-tablet) {
-                            top: -10%;
-                            padding: 20px 36px;
-                        }
+            .jrny-slick{
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 25px;
+                    left: 0;
+                    width: 100%;
+                    height: 1.8px;
+                    background-color: #b5b5b5;
+                    z-index: -1;
+                }
+    
+                .slider-nav-journey{
+                    position: relative;
+    
+                    &::before, &::after{
+                        content: '';
+                        position: absolute;
+                        top: 11.7px;
+                        width: 1.3px;
+                        height: 28px;
+                        background-color: #b5b5b5;
                     }
+    
+                    &::before{
+                        left: 0;
+                    }
+    
+                    &::after{
+                        right: -1px;
+                    }
+    
+                    .slick-list{
+                        margin: 0 50px;
+                        padding: 60px 0;
+                        position: relative;
+                        @include respond-max(sm-tablet) {
+                            margin: 0 20px;
+                            padding-bottom: 30px;
+                        }
+    
+                        .slick-track{
+                            .slick-slide{
+                                &.slick-current{
+                                    &.slick-active{
+                                        .slides-dots--sc{
+                                            .big-dots--sc{
+                                                .smll-dots{
+                                                    display: block;
+                                                    position: relative;
 
-                    &.slick-prev {
-                        left: unset;
-                        top: -30%;
-                        right: 60px; 
-
-                        @include on-event{
-                            right: 8.5%;
-                            top: -41%;
-                            transform: rotate(180deg);
-
-                            @include respond-max(md-dekstop) {
-                                right: 14%;
-                                top: -43%;
+                                                    &::before{
+                                                        position: absolute;
+                                                        content: '';
+                                                        transform: translateX(-50%);
+                                                        top: -18px;
+                                                        left: 50%;
+                                                        width: 45px;
+                                                        height: 45px;
+                                                        border-radius: 100px;
+                                                        border: 1.2px solid $white;
+                                                        background-color: transparent;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .slides-dots--sc{
+                                    text-align: center;
+                                    position: relative;
+    
+                                    .big-dots--sc{
+                                        position: absolute;
+                                        transform: translateX(-50%);
+                                        top: -40px;
+                                        left: 50%;
+                                        height: 10px;
+                                        width: 10px;
+                                        border-radius: 100%;
+                                        background-color: $white;
+                                        
+                                        .smll-dots{
+                                            display: none;
+                                        }
+                                    }
+                                }
                             }
                         }
-
-                        @include respond-max(lg-tablet) {
-                            right: unset;
-                            left: 38px;
-                            top: -25px;
-
-                            @include on-event{
-                                right: unset;
-                                top: -45px;
-                                left: 0;
-                            }
-                        }
                     }
-
-                    &.slick-next {
-                        left: unset;
-                        top: -41%;
-                        right: 0;
-                        transform: rotate(180deg); 
-
-                        @include respond-max(md-dekstop) {
-                            top: -43%;
-                        }
-
-                        @include respond-max(lg-tablet) {
-                            right: unset;
-                            left: 90px;
-                            top: -45px;
+                }
+    
+                .slider-for-journey{
+                    .slick-list{
+                        margin: 0 50px;
+                        padding: 30px 0 100px;
+                        position: relative;
+                        @include respond-max(sm-tablet) {
+                            margin: 0 20px;
+                            padding-bottom: 50px;
                         }
                     }
                 }
@@ -416,6 +260,70 @@ section{
 
             @include respond-max(lg-tablet) {
                 margin: 1.5rem 0;
+            }
+        }
+    }
+
+    .arrw-banient {
+        .slick-arrow{
+            background-color: transparent;
+            border: 1px solid $white;
+            transition: all .3s ease-in-out;
+            width: 70px;
+            height: 70px;
+            @include respond-max(lg-tablet) {
+                width: 50px;
+                height: 50px;
+            }
+            &::before{
+                content: '';
+                background-image: url('../../../dist/fe/assets/images/ic_arrow_left.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                padding-top: 20%;
+                display: block;
+            }
+
+            @include on-event{
+                background-color: $white;
+                border-color: transparent;
+            }
+
+            &.slick-prev{
+                left: -160px;
+                @include respond-max(lg-tablet) {
+                    left: -120px;
+                }
+                @include respond-max(sm-tablet) {
+                    left: 0;
+                }
+                @include on-event{
+                    background-color: $white;
+                    border-color: transparent;
+                    &::before{
+                        transform: rotate(180deg) !important;
+                        background-image: url('../../../dist/fe/assets/images/ic_arrow-right.png');
+                    }
+                }
+            }
+
+            &.slick-next{
+                right: 0;
+                @include respond-max(sm-tablet) {
+                    right: -120px;
+                }
+                @include on-event{
+                    background-color: $white;
+                    border-color: transparent;
+                    &::before{
+                        transform: rotate(0) !important;
+                        background-image: url('../../../dist/fe/assets/images/ic_arrow-right.png');
+                    }
+                }
+                &::before{
+                    transform: rotate(180deg) !important;
+                }
             }
         }
     }

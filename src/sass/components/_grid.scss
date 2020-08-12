@@ -18,7 +18,7 @@
         margin-left: auto; 
 
         @include respond-max(sm-tablet) {
-            grid-gap: 10px;
+            grid-gap: 25px;
         }
     }
 
@@ -42,7 +42,8 @@
 
     &.--img-miles {
         grid-template-columns: minmax(1px, 50px) minmax(1px, auto);
-        grid-gap: 10px; 
+        grid-gap: 10px;
+        align-items: flex-start;
     }
 
     &.gr-jrny{
@@ -52,6 +53,15 @@
         .mn-right{
             margin-left: auto;
             position: relative;
+        }
+
+        @include respond-max(sm-tablet) {
+            grid-template-columns: minmax(1px, auto);
+            grid-gap: 50px; 
+            .mn-right{
+                margin-left: 0;
+                margin-right: auto;
+            }
         }
     }
 }
